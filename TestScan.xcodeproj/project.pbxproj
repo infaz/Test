@@ -35,6 +35,7 @@
 		2C0FD906200DCDED001A14BE /* TestScan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestScan-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C0FD90F200DE7AE001A14BE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2C0FD913200DEC57001A14BE /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		2C61F0B4205EAD3B004B10B1 /* TestScan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestScan.entitlements; sourceTree = "<group>"; };
 		6C17E9A2642B0B58A30D8678 /* Pods-TestScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestScan.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestScan/Pods-TestScan.release.xcconfig"; sourceTree = "<group>"; };
 		B059F5A1CEEB8AE33879943A /* Pods_TestScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE5462844D2D6716092DE45 /* Pods-TestScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestScan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestScan/Pods-TestScan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		2C0FD8BF200DCB23001A14BE /* TestScan */ = {
 			isa = PBXGroup;
 			children = (
+				2C61F0B4205EAD3B004B10B1 /* TestScan.entitlements */,
 				2C0FD913200DEC57001A14BE /* tessdata */,
 				2C0FD8C0200DCB23001A14BE /* AppDelegate.swift */,
 				2C0FD8C2200DCB23001A14BE /* ViewController.swift */,
@@ -153,6 +155,11 @@
 					2C0FD8BC200DCB23001A14BE = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -388,6 +395,7 @@
 			baseConfigurationReference = BFE5462844D2D6716092DE45 /* Pods-TestScan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestScan/TestScan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPJ5MCVMCU;
 				ENABLE_BITCODE = NO;
@@ -421,6 +429,7 @@
 			baseConfigurationReference = 6C17E9A2642B0B58A30D8678 /* Pods-TestScan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestScan/TestScan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KPJ5MCVMCU;
 				ENABLE_BITCODE = NO;
